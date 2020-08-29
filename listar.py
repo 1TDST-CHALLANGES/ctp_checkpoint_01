@@ -16,4 +16,6 @@ def listar_produtos():
         print(f" {produto[0]}  {produto[1].ljust(20)} {produto[2]}")
         qtd_cadastrados += 1
 
+
     print("\nTotal de produtos cadastrados: ", qtd_cadastrados)
+

@@ -10,8 +10,9 @@ def cadastrar_produto():
     else:
         main.codigo.append(_codigo)
         main.descricao = input("Descrição do produto: ").upper()
-        main.quantidade = input("Quantidade de estoque: ")
-        main.estoque.append([_codigo, main.descricao, main.quantidade])
+        _quantidade = input("Quantidade de estoque: ")
+        main.estoque.append(_quantidade)
+        main.estoque.append([_codigo, main.descricao, _quantidade])
         while int(main.quantidade) <= 0:
             print("\033[31mNão é permitido ter estoque menor ou igual a zero\033[m")
             main.quantidade = input("Quantidade de estoque: ")
