@@ -12,8 +12,9 @@ descricao = []
 quantidade = []
 estoque = []
 
-# TODO: exclu
-# TODO: essa é uma questão de verificação do código na lista
+# TODO: utilizar tupla
+# TODO: opcao de voltar no menu
+# TODO: atualizar função cadastrar (versão atualizada está no main)
 
 while menu != 7:
     print("\nMenu")
