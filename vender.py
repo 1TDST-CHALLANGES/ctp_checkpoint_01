@@ -10,14 +10,14 @@ def vender_produto():
         qtd_prod = int(input("Quanto deseja vender: "))
         # irá percorrer produto por produto em estoque
         for produto in main.estoque:
-            if qtd_prod > int(produto[2]): #conversão necessária para a validação
+            if qtd_prod > int(produto[2]): # conversão necessária para a validação
                 print("Quantia digitada é maior que", produto[2],"(disponível em estoque.)")
-            elif qtd_prod <= 0:
+            elif qtd_prod <= 0: # verifica se a quantia digitada é <= a zero
                 print("Quantia digitada é menor ou igual a zero.")
             else:
-                if produto[0] == codigo:
+                if produto[0] == codigo: # procura o código do produto dentro do estoque
                     listar.exibir_produto(codigo)
-                    produto[2] = int(produto[2]) - qtd_prod
+                    produto[2] = int(produto[2]) - qtd_prod # realiza a subtração da venda
                     print("\t\tATUALIZAÇÃO: ")
                     listar.exibir_produto(codigo)
     else:

@@ -1,4 +1,5 @@
 import main
+import listar
 
 def excluir_produto():
     cont = 3
@@ -12,17 +13,15 @@ def excluir_produto():
         codigo = input("Código: ")
         if codigo in main.codigo:
             for produto in main.estoque:
-                print("CÓDIGO\tDESCRIÇÃO\tQUANTIDADE EM ESTOQUE:")
-                print(6 * '-', '', 9 * '-', ' ', 22 * '-')
-                print(f" {produto[0]}  {produto[1].ljust(20)} {produto[2]}")
-            opcao = input("Deseja excluir o produto? [S/N] ").upper()
-            if opcao == "s".upper():
-                main.estoque(main.estoque[0])
-                print("\033[32mProduto excluido com sucesso\033[m")
-            elif opcao == "n".upper():
-                print("\033[31mProduto não excluido\033[m")
-            else:
-                print("\033[31mOpção inválida\033[m")
+                listar.exibir_produto(codigo)
+                opcao = input("Deseja excluir o produto? [S/N] ").upper()
+                if opcao == "s".upper():
+                    main.estoque.remove(produto)
+                    print("\033[32mProduto excluido com sucesso\033[m")
+                elif opcao == "n".upper():
+                    print("\033[31mProduto não excluido\033[m")
+                else:
+                    print("\033[31mOpção inválida\033[m")
         else:
             print("\033[31mProduto não cadastrado\033[m")
     else:
