@@ -15,7 +15,7 @@ def comprar_produto():
                 if produto[0] == codigo:  # procura o código do produto dentro do estoque
                     listar.exibir_produto(codigo)
                     produto[2] = int(produto[2]) + qtd_prod  # realiza a soma da compra
-                    print("\t\tATUALIZAÇÃO: ")
+                    print("\033[32m\t\tATUALIZAÇÃO: \033[m")
                     listar.exibir_produto(codigo)
     else:
         print("\033[31mProduto não cadastrado\033[m")

@@ -1,4 +1,5 @@
 import main
+import listar
 
 def alterar_produto():
     cont = 3
@@ -16,6 +17,7 @@ def alterar_produto():
             for produto in main.estoque:
                 # se o produto tiver o codigo digitado
                 if produto[0] == codigo:
+                    listar.exibir_produto(codigo)
                     novo_desc = input("Digite a nova descrição: ").upper()
                     novo_quant = int(input("Digite a nova quantia: "))
                     produto[1] = novo_desc
