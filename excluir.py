@@ -11,17 +11,21 @@ def excluir_produto():
     if senha == "yN1825*a":
         print("\033[32mAcesso permitido!\033[m")
         codigo = input("Código: ")
+        # verifica se o codigo existe na lista
         if codigo in main.codigo:
+            # itera produto por produto em estoque
             for produto in main.estoque:
-                listar.exibir_produto(codigo)
-                opcao = input("Deseja excluir o produto? [S/N] ").upper()
-                if opcao == "s".upper():
-                    main.estoque.remove(produto)
-                    print("\033[32mProduto excluido com sucesso\033[m")
-                elif opcao == "n".upper():
-                    print("\033[31mProduto não excluido\033[m")
-                else:
-                    print("\033[31mOpção inválida\033[m")
+                # se o produto tiver o codigo digitado
+                if produto[0] == codigo:
+                    listar.exibir_produto(codigo)
+                    opcao = input("Deseja excluir o produto? [S/N] ").upper()
+                    if opcao == "s".upper():
+                        main.estoque.remove(produto)
+                        print("\033[32mProduto excluido com sucesso\033[m")
+                    elif opcao == "n".upper():
+                        print("\033[31mProduto não excluido\033[m")
+                    else:
+                        print("\033[31mOpção inválida\033[m")
         else:
             print("\033[31mProduto não cadastrado\033[m")
     else:

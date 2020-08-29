@@ -12,17 +12,21 @@ descricao = []
 quantidade = []
 estoque = []
 
+# TODO: exclu
+# TODO: essa é uma questão de verificação do código na lista
+
 while menu != 7:
     print("\nMenu")
     opcao = int(input("\t1 - Cadastrar Produto\n\t2 - Alterar Produto\n\t3 - Excluir Produto""\n\t4 - Listar Estoque\n\t5 - Comprar Produto""\n\t6 - Vender Produto\n\t7 - Sair\n\nDigite a opção desejada: "))
     if opcao == 1: #Cadastrar Produto
-        codigo = input("Código do produto: ")
+        _codigo = input("Código do produto: ")
+        codigo.append(_codigo)
         if codigo in estoque:
             print("\033[31mCódigo já cadastrado\033[m")
         else:
           descricao = input("Descrição do produto: ").upper()
           quantidade = input("Quantidade de estoque: ")
-          estoque.append([codigo, descricao, quantidade])
+          estoque.append([_codigo, descricao, quantidade])
           while int(quantidade) <= 0:
               print("\033[31mNão é permitido ter estoque menor ou igual a zero\033[m")
               quantidade = input("Quantidade de estoque: ")

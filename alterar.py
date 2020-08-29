@@ -10,6 +10,7 @@ def alterar_produto():
     if senha == "yN1825*a":
         print("\033[32mAcesso permitido!\033[m")
         codigo = input("Código: ")
+        print(main.codigo)
         if codigo in main.codigo:
             for produto in main.estoque:
                 if produto[0] == codigo:
