@@ -9,8 +9,8 @@ def excluir_produto():
         cont = cont - 1
     if senha == "yN1825*a":
         print("\033[32mAcesso permitido!\033[m")
-        codigo = int(input("Código: "))
-        if codigo in main.estoque:
+        codigo = input("Código: ")
+        if codigo in main.codigo:
             for produto in main.estoque:
                 print("CÓDIGO\tDESCRIÇÃO\tQUANTIDADE EM ESTOQUE:")
                 print(6 * '-', '', 9 * '-', ' ', 22 * '-')
