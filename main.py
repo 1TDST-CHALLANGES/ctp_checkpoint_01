@@ -14,41 +14,47 @@ estoque = []
 
 # TODO: utilizar tupla
 # TODO: opcao de voltar no menu
-# TODO: atualizar função cadastrar (versão atualizada está no main)
+# TODO: importar funcao cadastrar_produto (problema de import)
 
 while menu != 7:
     print("\nMenu")
-    opcao = int(input("\t1 - Cadastrar Produto\n\t2 - Alterar Produto\n\t3 - Excluir Produto""\n\t4 - Listar Estoque\n\t5 - Comprar Produto""\n\t6 - Vender Produto\n\t7 - Sair\n\nDigite a opção desejada: "))
-    if opcao == 1: #Cadastrar Produto
+    opcao = int(input(
+        "\t1 - Cadastrar Produto\n\t2 - Alterar Produto\n\t3 - Excluir Produto""\n\t4 - Listar Estoque\n\t5 - Comprar "
+        "Produto""\n\t6 - Vender Produto\n\t7 - Sair\n\nDigite a opção desejada: "))
+    if opcao == 1:  # Cadastrar Produto
+        #cadastrar_produto()
+
         _codigo = input("Código do produto: ")
-        codigo.append(_codigo)
-        if codigo in estoque:
+
+        if _codigo in codigo:
             print("\033[31mCódigo já cadastrado\033[m")
         else:
-          descricao = input("Descrição do produto: ").upper()
-          quantidade = input("Quantidade de estoque: ")
-          estoque.append([_codigo, descricao, quantidade])
-          while int(quantidade) <= 0:
-              print("\033[31mNão é permitido ter estoque menor ou igual a zero\033[m")
-              quantidade = input("Quantidade de estoque: ")
-          print(estoque)
+            codigo.append(_codigo)
+            descricao = input("Descrição do produto: ").upper()
+            quantidade = input("Quantidade de estoque: ")
+            estoque.append([_codigo, descricao, quantidade])
+            while int(quantidade) <= 0:
+                print("\033[31mNão é permitido ter estoque menor ou igual a zero\033[m")
+                quantidade = input("Quantidade de estoque: ")
+            print("\n\t\tPRODUTO CADASTRADO\n")
+            listar.exibir_produto(_codigo)
 
-    elif opcao == 2: #Alterar Produto
+    elif opcao == 2:  # Alterar Produto
         alterar.alterar_produto()
 
-    elif opcao == 3: #Excluir Produto
+    elif opcao == 3:  # Excluir Produto
         excluir.excluir_produto()
 
-    elif opcao == 4: #Listar Estoque
+    elif opcao == 4:  # Listar Estoque
         listar.listar_produtos()
 
-    elif opcao == 5: #Comprar Produto
+    elif opcao == 5:  # Comprar Produto
         comprar.comprar_produto()
 
-    elif opcao == 6: #Vender Produto
+    elif opcao == 6:  # Vender Produto
         vender.vender_produto()
 
-    elif opcao == 7: #Sair
+    elif opcao == 7:  # Sair
         print("\nSaindo...")
         exit()
 
