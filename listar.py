@@ -23,7 +23,6 @@ def listar_produtos():
         print(f" {produto[0].ljust(6)}  {produto[1].ljust(20)} {produto[2]}")
         qtd_cadastrados+=1
     print(6 * '-', '', 9 * '-', ' ', 22 * '-')
-     
     print("\nTotal de produtos cadastrados: ", qtd_cadastrados)
     print("Quantidade de itens em estoque: ", )
     print("Produto com estoque abaixo do mínimo permitido (100 unidades): ", qtd_estoque)

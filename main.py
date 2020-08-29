@@ -1,4 +1,3 @@
-import cadastrar
 import alterar
 import excluir
 import comprar
