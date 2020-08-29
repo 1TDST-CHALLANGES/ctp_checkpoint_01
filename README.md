@@ -58,12 +58,19 @@ Importante: A quantidade em estoque não pode ficar negativa. Caso o usuário di
       ——————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
 - [x] (2.0 pontos) REGRAS:
+
 a) Obrigatório o uso de laço de repetição
+
 b) Obrigatório criar pelo menos 2 (duas) funções e fica a critério do aluno: com ou sem parâmetro e com ou sem return.
+
 c) Obrigatório usar lista e tupla.
 
 - [x] (1.0 ponto) Considerações:
+
 a) Não há limite para cadastro de produtos
+
 b) Se o usuário entrar com a senha correta (ao acessar a opção alterar ou excluir produto), não deve ser solicitada mais até o usuário sair do programa. O limite de tentativas para acesso, em caso de senha incorreta, é 3 tentativas.
+
 c) Não permitir quantidade de produto menor ou igual a 0 (zero) nas opções 1, 2, 5 e 6.
+
 d) O programa somente pode ser finalizado se o usuário escolher a opção 7 ou se digitar 3 vezes a senha de acesso a opção 2 e 3 incorretamente.
