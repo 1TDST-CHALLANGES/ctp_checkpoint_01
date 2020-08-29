@@ -1,5 +1,6 @@
 import main
 import listar
+senha_correta = ("yN1825*a")
 
 def alterar_produto():
     cont = 3
@@ -8,7 +9,7 @@ def alterar_produto():
         print("\033[31mSenha incorreta, você têm mais ", cont - 1, " tentativas.\033[m")
         senha = input("Digite novamente.\nSenha: ")
         cont = cont - 1
-    if senha == "yN1825*a":
+    if senha == senha_correta:
         print("\033[32mAcesso permitido!\033[m")
         codigo = input("Código: ")
         # verifica se o codigo existe na lista
