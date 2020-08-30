@@ -34,10 +34,10 @@ while menu != 7:
             else:
                 codigo.append(_codigo)
                 descricao = input("Descrição do produto: ").upper()
-                _quantidade = input("Quantidade de estoque: ")
+                _quantidade = int(input("Quantidade de estoque: "))
                 while int(_quantidade) <= 0:
                     print("\033[31mNão é permitido ter estoque menor ou igual a zero\033[m")
-                    _quantidade = input("Quantidade de estoque: ")
+                    _quantidade = int(input("Quantidade de estoque: "))
                 quantidade.append(_quantidade)
                 estoque.append([_codigo, descricao, _quantidade])
                 print("\033[32m\n\t\tPRODUTO CADASTRADO\n\033[m")
